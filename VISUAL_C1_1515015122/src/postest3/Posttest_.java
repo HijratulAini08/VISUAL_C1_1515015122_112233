@@ -85,7 +85,6 @@ public class Posttest_ extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         PDasar.setBackground(new java.awt.Color(204, 255, 255));
         PDasar.setLayout(new java.awt.BorderLayout());
@@ -145,7 +144,7 @@ public class Posttest_ extends javax.swing.JFrame {
         PKonten.add(PKWelcome, "card2");
 
         PKGaleri.setBackground(new java.awt.Color(242, 242, 242));
-        PKGaleri.setLayout(new java.awt.GridLayout());
+        PKGaleri.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/postest3/ruangtamu.jpg"))); // NOI18N
         PKGaleri.add(jLabel1);
@@ -439,7 +438,16 @@ public class Posttest_ extends javax.swing.JFrame {
 
         PDasar.add(PMenu, java.awt.BorderLayout.LINE_START);
 
-        getContentPane().add(PDasar, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1090, 670));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(PDasar, javax.swing.GroupLayout.PREFERRED_SIZE, 1090, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(PDasar, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
