@@ -59,6 +59,11 @@ public class post extends javax.swing.JFrame {
                 formComponentShown(evt);
             }
         });
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new java.awt.CardLayout());
@@ -311,8 +316,8 @@ public class post extends javax.swing.JFrame {
         // TODO add your handling code here:
         int baris= jTable1.getSelectedRow();
         JOptionPane.showMessageDialog(this,"DATA BERHASIL DI UPDATE");
-        jTable1.setValueAt(txt_telp.getText(), baris, 0);
-        jTable1.setValueAt(txt_nama.getText(), baris, 1);
+        jTable1.setValueAt(txt_nama.getText(), baris, 0);
+        jTable1.setValueAt(txt_telp.getText(), baris, 1);
         jTable1.setValueAt(combo.getSelectedItem(), baris, 2);
         
     }//GEN-LAST:event_updateActionPerformed
@@ -379,6 +384,12 @@ public class post extends javax.swing.JFrame {
             }
         }); 
     }//GEN-LAST:event_txt_telpKeyPressed
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        // TODO add your handling code here:
+        txt_nama.setText("");
+        txt_telp.setText("");
+    }//GEN-LAST:event_formWindowOpened
 
     /**
      * @param args the command line arguments
