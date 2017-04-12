@@ -536,7 +536,7 @@ public class FormDataBuku extends javax.swing.JFrame {
         else
         {
             simpan.setEnabled(false);
-            ubah.setEnabled(true);
+            ubah.setEnabled(false);
         }
     }//GEN-LAST:event_txt_judulCaretUpdate
 
@@ -550,7 +550,7 @@ public class FormDataBuku extends javax.swing.JFrame {
         else
         {
             simpan.setEnabled(false);
-            ubah.setEnabled(true);
+            ubah.setEnabled(false);
         }
     }//GEN-LAST:event_txt_hargaCaretUpdate
 
